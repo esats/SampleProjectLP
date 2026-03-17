@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
@@ -23,7 +25,19 @@ namespace WebApi.Controllers
 
         public HttpResponseMessage AlreadyExists()
         {
-            return ControllerContext.Request.CreateResponse(HttpStatusCode.NotImplemented);
+            return ControllerContext.Request.CreateResponse(HttpStatusCode.Conflict);
+        }
+
+        public HttpResponseMessage ValidationFailed()
+        {
+            var errors = ModelState
+                .Where(x => x.Value.Errors.Count > 0)
+                .ToDictionary(
+                    x => x.Key,
+                    x => x.Value.Errors.Select(e => e.ErrorMessage).ToList()
+                );
+
+            return ControllerContext.Request.CreateResponse(HttpStatusCode.BadRequest, new { errors });
         }
     }
 }

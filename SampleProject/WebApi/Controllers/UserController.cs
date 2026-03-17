@@ -28,13 +28,18 @@ namespace WebApi.Controllers
         [HttpPost]
         public HttpResponseMessage CreateUser(Guid userId, [FromBody] UserModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return ValidationFailed();
+            }
+
             var existing = _getUserService.GetUser(userId);
             if (existing != null)
             {
                 return AlreadyExists();
             }
 
-            var user = _createUserService.Create(userId, model.Name, model.Email, model.Type, model.AnnualSalary, model.Tags);
+            var user = _createUserService.Create(userId, model.Name, model.Email, model.Type.Value, model.AnnualSalary, model.Tags);
             return Found(new UserData(user));
         }
 
@@ -42,12 +47,17 @@ namespace WebApi.Controllers
         [HttpPost]
         public HttpResponseMessage UpdateUser(Guid userId, [FromBody] UserModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return ValidationFailed();
+            }
+
             var user = _getUserService.GetUser(userId);
             if (user == null)
             {
                 return DoesNotExist();
             }
-            _updateUserService.Update(user, model.Name, model.Email, model.Type, model.AnnualSalary, model.Tags);
+            _updateUserService.Update(user, model.Name, model.Email, model.Type.Value, model.AnnualSalary, model.Tags);
             return Found(new UserData(user));
         }
 
