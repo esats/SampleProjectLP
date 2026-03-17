@@ -39,7 +39,7 @@ namespace WebApi.Controllers
                 return AlreadyExists();
             }
 
-            var user = _createUserService.Create(userId, model.Name, model.Email, model.Type.Value, model.AnnualSalary, model.Tags);
+            var user = _createUserService.Create(userId, model.Name, model.Email, model.Age, model.Type.Value, model.AnnualSalary, model.Tags);
             return Found(new UserData(user));
         }
 
@@ -58,7 +58,7 @@ namespace WebApi.Controllers
                 return DoesNotExist();
             }
 
-            _updateUserService.Update(user, model.Name, model.Email, model.Type.Value, model.AnnualSalary, model.Tags);
+            _updateUserService.Update(user, model.Name, model.Email, model.Age, model.Type.Value, model.AnnualSalary, model.Tags);
             return Found(new UserData(user));
         }
 

@@ -12,6 +12,9 @@ namespace WebApi.Models.Users
         [Required(ErrorMessage = "Email is required")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Age is required")]
+        public int Age { get; set; }
+
         [Required(ErrorMessage = "Type is required")]
         public UserTypes? Type { get; set; }
 
