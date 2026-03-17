@@ -20,5 +20,10 @@ namespace WebApi.Controllers
         {
             return ControllerContext.Request.CreateResponse(HttpStatusCode.NotFound);
         }
+
+        public HttpResponseMessage AlreadyExists()
+        {
+            return ControllerContext.Request.CreateResponse(HttpStatusCode.NotImplemented);
+        }
     }
 }
