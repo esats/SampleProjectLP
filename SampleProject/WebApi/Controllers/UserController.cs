@@ -57,6 +57,7 @@ namespace WebApi.Controllers
             {
                 return DoesNotExist();
             }
+
             _updateUserService.Update(user, model.Name, model.Email, model.Type.Value, model.AnnualSalary, model.Tags);
             return Found(new UserData(user));
         }
