@@ -25,5 +25,10 @@ namespace Core.Services.Orders
         {
             return _orderRepository.GetAll();
         }
+
+        public IEnumerable<Order> GetOrdersByCustomer(Guid customerId)
+        {
+            return _orderRepository.GetByCustomer(customerId);
+        }
     }
 }

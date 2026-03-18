@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 using Core.Services.Orders;
@@ -52,13 +53,13 @@ namespace WebApi.Controllers
             var product = _getProductService.GetProduct(model.ProductId);
             if (product == null)
             {
-                return DoesNotExistWithMessage("No product found.");
+                return DoesNotExistWithMessage("No product found. You Should run product create query on postman");
             }
 
             var customer = _getUserService.GetUser(model.CustomerId);
             if (customer == null)
             {
-                return DoesNotExistWithMessage("No customer found.");
+                return DoesNotExistWithMessage("No customer found. You Should run initialize sample data queries on postman");
             }
 
             var order = _createOrderService.Create(orderId, model.CustomerId, model.ProductId, model.Total);
@@ -83,13 +84,13 @@ namespace WebApi.Controllers
             var product = _getProductService.GetProduct(model.ProductId);
             if (product == null)
             {
-                return DoesNotExistWithMessage("No product found.");
+                return DoesNotExistWithMessage("No product found. You Should run product create query on postman");
             }
 
             var customer = _getUserService.GetUser(model.CustomerId);
             if (customer == null)
             {
-                return DoesNotExistWithMessage("No customer found.");
+                return DoesNotExistWithMessage("No customer found. You Should run initialize sample data queries on postman");
             }
 
             _updateOrderService.Update(order, model.CustomerId, model.ProductId, model.Total);
@@ -140,6 +141,31 @@ namespace WebApi.Controllers
             }
 
             return Found(new OrderData(order));
+        }
+
+        [Route("filter")]
+        [HttpGet]
+        public HttpResponseMessage FilterOrders([FromUri] Guid customerId, [FromUri] int page = 1, [FromUri] int pageSize = 10)
+        {
+            var customer = _getUserService.GetUser(customerId);
+            if (customer == null)
+            {
+                return DoesNotExistWithMessage("No customer found. You Should run initialize sample data queries on postman");
+            }
+
+            var orders = _getOrderService.GetOrdersByCustomer(customerId).ToList();
+            var totalCount = orders.Count;
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+            var items = orders.Skip((page - 1) * pageSize).Take(pageSize).Select(o => new OrderData(o));
+
+            return Found(new PagedOrderData
+            {
+                Page = page,
+                PageSize = pageSize,
+                TotalCount = totalCount,
+                TotalPages = totalPages,
+                Items = items
+            });
         }
     }
 }

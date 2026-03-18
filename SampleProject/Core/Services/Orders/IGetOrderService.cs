@@ -8,5 +8,6 @@ namespace Core.Services.Orders
     {
         Order GetOrder(Guid id);
         IEnumerable<Order> GetOrders();
+        IEnumerable<Order> GetOrdersByCustomer(Guid customerId);
     }
 }

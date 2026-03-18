@@ -545,6 +545,40 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Filter Orders By Customer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/orders/filter?customerId=1422740e-6426-4c46-8445-3f5274a62424&page=1&pageSize=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "customerId",
+											"value": "1422740e-6426-4c46-8445-3f5274a62424"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				}

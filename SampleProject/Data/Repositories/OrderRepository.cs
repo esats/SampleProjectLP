@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using BusinessEntities;
 using Common;
 
@@ -29,6 +30,11 @@ namespace Data.Repositories
         public IEnumerable<Order> GetAll()
         {
             return _store.Values;
+        }
+
+        public IEnumerable<Order> GetByCustomer(Guid customerId)
+        {
+            return _store.Values.Where(o => o.CustomerId == customerId);
         }
     }
 }
