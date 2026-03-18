@@ -17,14 +17,9 @@
 						"url": {
 							"raw": "http://localhost:49834/users/clear",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"clear"
-							]
+							"path": ["users", "clear"]
 						}
 					},
 					"response": []
@@ -37,24 +32,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"John Smith\",\r\n    \"email\": \"mark@companya.com\",\r\n    \"type\": 2,\r\n    \"age\": 27,\r\n    \"annualSalary\": 72000,\r\n    \"tags\": [\"A\", \"C\", \"D\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/1422740e-6426-4c46-8445-3f5274a62424/create",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"1422740e-6426-4c46-8445-3f5274a62424",
-								"create"
-							]
+							"path": ["users", "1422740e-6426-4c46-8445-3f5274a62424", "create"]
 						}
 					},
 					"response": []
@@ -67,24 +52,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Mark Williams\",\r\n    \"email\": \"mark@companya.com\",\r\n    \"type\": 1,\r\n    \"age\": 35,\r\n    \"annualSalary\": 120000,\r\n    \"tags\": [\"b\", \"c\", \"e\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/9422740e-6426-4c46-8445-3f5274a62424/create",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"9422740e-6426-4c46-8445-3f5274a62424",
-								"create"
-							]
+							"path": ["users", "9422740e-6426-4c46-8445-3f5274a62424", "create"]
 						}
 					},
 					"response": []
@@ -97,24 +72,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Andy\",\r\n    \"email\": \"andy@companya.com\",\r\n    \"type\": 2,\r\n    \"age\": 34,\r\n    \"annualSalary\": 86000,\r\n    \"tags\": [\"D\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/8722740e-6426-4c46-8445-3f5274a62424/create",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"8722740e-6426-4c46-8445-3f5274a62424",
-								"create"
-							]
+							"path": ["users", "8722740e-6426-4c46-8445-3f5274a62424", "create"]
 						}
 					},
 					"response": []
@@ -132,24 +97,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "//The exception \"PUT attempted on document 'users/1422740e-6426-4c46-8445-3f5274a62424' using a non current etag\" means that the record with the same ID already exists.\r\n{\r\n    \"name\": \"Mary\",\r\n    \"email\": \"mary@companya.com\",\r\n    \"type\": 1,\r\n    \"age\": 29,\r\n    \"annualSalary\": 80000,\r\n    \"tags\": []\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/1422740e-6426-4c46-8445-3f5274a62424/create",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"1422740e-6426-4c46-8445-3f5274a62424",
-								"create"
-							]
+							"path": ["users", "1422740e-6426-4c46-8445-3f5274a62424", "create"]
 						}
 					},
 					"response": []
@@ -162,24 +117,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Mark Williams (updated)\",\r\n    \"email\": null,\r\n    \"type\": 2,\r\n    \"age\": 29,\r\n    \"annualSalary\": 80000,\r\n    \"tags\": [\"A\", \"C\", \"D\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/9422740e-6426-4c46-8445-3f5274a62424/update",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"9422740e-6426-4c46-8445-3f5274a62424",
-								"update"
-							]
+							"path": ["users", "9422740e-6426-4c46-8445-3f5274a62424", "update"]
 						}
 					},
 					"response": []
@@ -192,24 +137,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Mark Williams\",\r\n    \"email\": \"mark@companya.com\",\r\n    \"type\": 1,\r\n    \"age\": 29,\r\n    \"annualSalary\": null,\r\n    \"tags\": [\"A\", \"C\", \"D\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/9422740e-6426-4c46-8445-3f5274a62424/update",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"9422740e-6426-4c46-8445-3f5274a62424",
-								"update"
-							]
+							"path": ["users", "9422740e-6426-4c46-8445-3f5274a62424", "update"]
 						}
 					},
 					"response": []
@@ -222,24 +157,14 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Mark Williams\",\r\n    \"email\": \"mark@companya.com\",\r\n    \"type\": 1,\r\n    \"age\": 29,\r\n    \"annualSalary\": 152000,\r\n    \"tags\": null\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"options": { "raw": { "language": "json" } }
 						},
 						"url": {
 							"raw": "http://localhost:49834/users/9422740e-6426-4c46-8445-3f5274a62424/update",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"9422740e-6426-4c46-8445-3f5274a62424",
-								"update"
-							]
+							"path": ["users", "9422740e-6426-4c46-8445-3f5274a62424", "update"]
 						}
 					},
 					"response": []
@@ -252,21 +177,10 @@
 						"url": {
 							"raw": "http://localhost:49834/users/list/tag?tag=C",
 							"protocol": "http",
-							"host": [
-								"localhost"
-							],
+							"host": ["localhost"],
 							"port": "49834",
-							"path": [
-								"users",
-								"list",
-								"tag"
-							],
-							"query": [
-								{
-									"key": "tag",
-									"value": "C"
-								}
-							]
+							"path": ["users", "list", "tag"],
+							"query": [{ "key": "tag", "value": "C" }]
 						}
 					},
 					"response": []
@@ -278,7 +192,78 @@
 			"item": [
 				{
 					"name": "Products",
-					"item": []
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Wireless Mouse\",\r\n    \"description\": \"Ergonomic wireless mouse with USB receiver\",\r\n    \"brandName\": \"Logitech\",\r\n    \"categoryName\": \"Electronics\",\r\n    \"sku\": \"LOG-WM-001\",\r\n    \"isActive\": true\r\n}",
+									"options": { "raw": { "language": "json" } }
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/a1b2c3d4-e5f6-7890-abcd-ef1234567890/create",
+									"protocol": "http",
+									"host": ["localhost"],
+									"port": "49834",
+									"path": ["products", "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "create"]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Wireless Mouse (updated)\",\r\n    \"description\": \"Ergonomic wireless mouse with USB receiver - updated\",\r\n    \"brandName\": \"Logitech\",\r\n    \"categoryName\": \"Electronics\",\r\n    \"sku\": \"LOG-WM-001-V2\",\r\n    \"isActive\": true\r\n}",
+									"options": { "raw": { "language": "json" } }
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/a1b2c3d4-e5f6-7890-abcd-ef1234567890/update",
+									"protocol": "http",
+									"host": ["localhost"],
+									"port": "49834",
+									"path": ["products", "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "update"]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/a1b2c3d4-e5f6-7890-abcd-ef1234567890/delete",
+									"protocol": "http",
+									"host": ["localhost"],
+									"port": "49834",
+									"path": ["products", "a1b2c3d4-e5f6-7890-abcd-ef1234567890", "delete"]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+									"protocol": "http",
+									"host": ["localhost"],
+									"port": "49834",
+									"path": ["products", "a1b2c3d4-e5f6-7890-abcd-ef1234567890"]
+								}
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "Orders",
