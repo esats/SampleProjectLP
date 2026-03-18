@@ -25,5 +25,10 @@ namespace Core.Services.Products
         {
             return _productRepository.GetAll();
         }
+
+        public IEnumerable<Product> GetFilteredProducts(string brandName, string categoryName)
+        {
+            return _productRepository.GetFiltered(brandName, categoryName);
+        }
     }
 }

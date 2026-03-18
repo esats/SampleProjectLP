@@ -262,6 +262,25 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Filter Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/filter?brandName=Logitech&categoryName=Electronics",
+									"protocol": "http",
+									"host": ["localhost"],
+									"port": "49834",
+									"path": ["products", "filter"],
+									"query": [
+										{ "key": "brandName", "value": "Logitech" },
+										{ "key": "categoryName", "value": "Electronics" }
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},

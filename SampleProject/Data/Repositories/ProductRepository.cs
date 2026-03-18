@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using BusinessEntities;
 using Common;
 
@@ -29,6 +30,19 @@ namespace Data.Repositories
         public IEnumerable<Product> GetAll()
         {
             return _store.Values;
+        }
+
+        public IEnumerable<Product> GetFiltered(string brandName, string categoryName)
+        {
+            var products = _store.Values.AsEnumerable();
+
+            if (!string.IsNullOrWhiteSpace(brandName))
+                products = products.Where(p => p.BrandName == brandName);
+
+            if (!string.IsNullOrWhiteSpace(categoryName))
+                products = products.Where(p => p.CategoryName == categoryName);
+
+            return products;
         }
     }
 }

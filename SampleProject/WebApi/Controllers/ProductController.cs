@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
@@ -84,6 +85,14 @@ namespace WebApi.Controllers
                 return DoesNotExist();
             }
             return Found(new ProductData(product));
+        }
+
+        [Route("filter")]
+        [HttpGet]
+        public HttpResponseMessage FilterProducts([FromUri] string brandName = null, [FromUri] string categoryName = null)
+        {
+            var products = _getProductService.GetFilteredProducts(brandName, categoryName);
+            return Found(products.Select(p => new ProductData(p)));
         }
     }
 }

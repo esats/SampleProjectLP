@@ -8,5 +8,6 @@ namespace Core.Services.Products
     {
         Product GetProduct(Guid id);
         IEnumerable<Product> GetProducts();
+        IEnumerable<Product> GetFilteredProducts(string brandName, string categoryName);
     }
 }
